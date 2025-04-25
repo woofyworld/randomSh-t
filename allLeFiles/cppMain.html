@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Programming</title>
+    <link rel="stylesheet" href="../mainStyle.css" />
+</head>
+<body>
+    <main>
+        <h1>The CPP experience</h1>
+        <div id="main-wrapper">
+            <h3>Introduction</h3>
+            <p>
+                C++ is a really good language, there is C++ everywhere!
+                Made by the ultimate giga chad Bjarne Stroustrup at bell labs. So likewise, you wanna get
+                into C++? I'm 'bout to tell you, it <b>ain't easy</b>. But It ain't impossible either
+            </p>
+            <ol>
+                <li><h2>I AM THE GOD OF HELLFILE, AND I BRING YOU.. FILE </h2></li>
+                <li><p>So what on earth is this? hello world is generic.. SO let's print something 
+                    else, here is a boiler plate for a c++ file</p></li>
+                <li><pre><code>
+    #include &lt;iostream&gt;
+
+    int main() {
+        std::cout << "I AM THE GOD OF HELLFILE";
+    }
+</code></pre></li>
+                <li><p>
+                    What on earth is goin' on? Now it's time for inline comment to shine <br />
+                    //this is a comment, double slash as in double tap<br /> //what is include?
+                    a hash tag and the <b>include</b> keyword. Now "include", it is used to, well,
+                    includes this type of file called "header", similar to a library, it will let you to
+                    utilize the codes in the included header, like functions, classes.. <br /><br />
+                    /*the header is "iostream", which we need to get our printing magic working. The main function,
+                    serves as the, well, you name it, the main function of the program. This is where
+                    your code will first be executed when you run the program.. As this function will be called
+                    automatically, just make sure it is called <b>main</b>. <br /> as for the "std::cout" line
+                    let me explain, std is the abbreviation for standard, which is the standard library that
+                    C++ uses, it is a, really tremendous library, it have everything that C++ needs to
+                    operates.. and iostream is a part of it, so when we use <b>std</b>, we specify that we're
+                    using the std "namespace" <br /> Oh boy, now what is namespace? A namespace is like a
+                    folder or a last name for your code
+                    It helps you organize your functions, classes, and variables without name collisions,
+                    Think of it this way:<br />
+                    You're at a party and there are three people named <code>cout</code>. You shout "Hey cout!"<br />
+                    Suddenly, chaos. Three confused programmers turn around<br /> as for the "::", this is
+                    called scope resolution, we're going to see a lot more examples, but for now, it basically
+                    let you select a specific function or variable from a specific class or namespace, like i
+                    want to access a cake in bakeryOne, so i say <code>bakeryOne::chocolateCake</code><br />
+                    in this case cout is part of std, So <code>std::cout</code> is our gateway to
+                    print text. And guess what?<br />
+                    <code>&lt;&lt;</code> is the "insertion operator".
+                    You're not just sending text. You're jamming it into the stream like stuffing glitter into
+                    an envelope*/<br /><br /></p>
+                </li>
+                <li><p>so did ya learned anything? </p></li>
+            </ol>
+            <ol>
+                <li><h2>variable, type, function</h2></li>
+                <li><p><h5 class="green-text">
+                    >Be you<br />
+                    >You expected this to be another generic tutorial<br />
+                    >You're actually right<br />
+                    >Still gotta do it i guess<br />
+</h5> in C++, declaring a varible is quite simple.. We have several built in types, such as int, char, bool.. 
+                    for an example, let's declare an interger variable: <br /><code>int i = 88;</code><br />
+                    as you can see, we first need to declare a type for the variable, then the name, 
+                    the variable's value are optional, meaning you can leave it without initialize any value
+                    to the variable, just don't forget the semicolon ";", they pretty much just represent
+                    the end of a statement, so always put them at the end. You can also initialize 
+                    variable in a couple of ways, using =, using (), using {} -> <br /> int i = 1;
+                    int i(1); int i{1};<br /></p>
+                <li><p>C++ uses something called "static type checking", meaning you have to manually
+                    declare the type for variables, instead of for example, JavaScript, where type are
+                    dynamically check based on its value.. As for me I prefer static type, as it will
+                    gives you more clarity on the intended type of the variable, including functions, 
+                    and it is also faster</p></li>
+                <li><p>Let's also talk about function, here is how to declare a function:<br />
+                    <code>int squaredNumber(int x) { return x*x; }</code><br /> so the anatomy of a valid
+                    function, you'll need, the type, the name, "()" also called function call operator, 
+                    and lastly, {} two curly braces. You can also take something called parameter, in 
+                    the parenthesis, like you've seen, (int x), this will specify the type when the value
+                    is passed to the parameter, when we pass a value to a function, it is called "argument"
+                    <br /> for example i can do something like this: <code>int squared = 
+                    squaredNumber(2);</code> <br /> and then I'll print it: <code>std::cout << squared 
+                    << std::endl;</code> <br /> as we can see, we assigned the result of squaredNumber to
+                    the variable squared, which it should be 4 because we pass 2 as the argument. and then
+                    print the variable which will give us 4 as the output, we also have some new keywords,
+                    in which I'll also give you the definition of each.. <br /><br /> <code>return</code>: 
+                    end the function execution and, like the name, it return a value to where it was 
+                    requested, and in this case, it is our variable.<br /> <code>endl</code>: it adds a new 
+                    line(I know you've heard of line break) like "\n" which is a line break, it also flush the 
+                    output buffer. a buffer is a memory space used for temporarily storing data before it is
+                    processed, flushing here just means that all the output will be written immediately. 
+                    function can also be a special type called <code>void</code> type, basically
+                    if you use <code>void</code> as the function's type, you cannot return any value, and it 
+                    does not require you to use a return statement, as opposed to other types, like char, int..
+                    you'd need to return a value of the function's type, or else it will throw an error.
+                    </p></li>
+                <li><p>thus we concluded..</p></li>
+            </ol>
+            <ol>
+                <li><h2>arrays, loops, conditional statements</h2></li>
+                <li><p><h5 class="green-text">>we enter the realm of contiguous memory<br />
+                    >conditions that may keep the loop to traverse the array forever?<br /></h5>
+                    we have talked about the char type, but how to you declare one? here is how: 
+                    <code>char c = 'h';</code><br /> easy, simple, no try hard, just single quotations, allowing
+                    just a single character, you can put mutiple but only the character at the end will count.
+                    But what can you possibly do with just one character? That is why char are mostly uses
+                    as an array, <code>char name[7] = {'b', 'r', 'e', 'n', 't', 'o','n'};</code><br />
+                    square braces next to the variable's name is used to declare an array, you'd also 
+                    wanna to specify how <i>big</i> the array size should be, that is, the number inside
+                    the array. Our current array can hold 7 element, which is 7 character. Now
+                    we initialize the array using "{}" aka "list" initialization, now if you use list to
+                    init the array, you wouldn't have to specify the size, because the compiler deduces
+                    the size automatically, else, you would have to.. Although this is the case for static
+                    array, which is the one we use, and is not quite flexible, we have dynamic arrays like 
+                    vector, allocating new array on the heap etc.. But you don't have to worry about these
+                    for now, we will dive into them later.</p></li>
+                <li><p>Looooops, you have heard of a loop right? among majority of programming languages,
+                    the concept of loops are.. Pretty much the same. You have this called a <code>while</code>
+                    loop, a <code>for</code> loop, a ranged based loop, <code>do while</code> loops. We'll
+                    dive into each of them, starting with the while loop:<br />
+                    <pre><code>while (condition) { logic...} </code></pre><br /> Now I'd think you can use
+                    your intuition to understand the snippet, but I'll explain it. The anatomy of this loop
+                    statement, you first type <code>while</code>, and the parenthesis which contains the 
+                    specific boolean expression that keeps the loop going.. if the expression, which is 
+                    the condition, evaluates to true, then the loop will execute</p></li>
+            </ol>
+        </div>
+    </main>
+    <footer>
+        <h3><a href="../index.html">go back to main</a></h3>
+    </footer>
+</body>
+</html>
