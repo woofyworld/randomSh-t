@@ -104,14 +104,14 @@
                 <li><h2>arrays, loops, conditional statements</h2></li>
                 <li><p><h5 class="green-text">>we enter the realm of contiguous memory<br />
                     >conditions that may keep the loop to traverse the array forever?<br /></h5>
-                    we have talked about the char type, but how to you declare one? here is how: 
+                    we have talked about the char type, but how do you declare one? here is how: 
                     <code>char c = 'h';</code><br /> easy, simple, no try hard, just single quotations, allowing
                     just a single character, you can put mutiple but only the character at the end will count.
                     But what can you possibly do with just one character? That is why char are mostly uses
                     as an array, <code>char name[7] = {'b', 'r', 'e', 'n', 't', 'o','n'};</code><br />
                     square braces next to the variable's name is used to declare an array, you'd also 
                     wanna to specify how <i>big</i> the array size should be, that is, the number inside
-                    the array. Our current array can hold 7 element, which is 7 character. Now
+                    the square braces. Our current array can hold 7 element, which is 7 character. Now
                     we initialize the array using "{}" aka "list" initialization, now if you use list to
                     init the array, you wouldn't have to specify the size, because the compiler deduces
                     the size automatically, else, you would have to.. Although this is the case for static
@@ -122,11 +122,82 @@
                     the concept of loops are.. Pretty much the same. You have this called a <code>while</code>
                     loop, a <code>for</code> loop, a ranged based loop, <code>do while</code> loops. We'll
                     dive into each of them, starting with the while loop:<br />
-                    <pre><code>while (condition) { logic...} </code></pre><br /> Now I'd think you can use
+                    <pre><code>while (condition) { //logic...} </code></pre><br /> Now I'd think you can use
                     your intuition to understand the snippet, but I'll explain it. The anatomy of this loop
-                    statement, you first type <code>while</code>, and the parenthesis which contains the 
-                    specific boolean expression that keeps the loop going.. if the expression, which is 
-                    the condition, evaluates to true, then the loop will execute</p></li>
+                    statement, which includes a <code>while</code> keyword, and the parenthesis which contains 
+                    the specific boolean expression that keeps the loop going.. if the expression, which is 
+                    the condition, evaluates to true, then the loop will execute. It is like, while my car
+                    has fuel, I can drive it. and then we have curly braces, which specify the scope of this
+                    statement, as for this one, similarly to a function, is a block level statement, it can
+                    group several statements in a block, enclosed in curly braces, a statement can be a 
+                    variable, a boolean expression, a loop etc.. And as for statements declared within
+                    the block, can only be access within its scope, so if you declare a variable in this while
+                    loop, then you can't access it anywhere else, unless if we use something like a <code>
+                    reference</code> or a <code>pointer</code>.. But we will not discuss them for now, but we'll 
+                    keep them in mind.<br /><br /> we will now move on to the <code>for</code> loop, the 
+                    anatomy of the for loop is a bit more flexible comparing to the while loop: <br />
+                    <code>for (control variable; condition; update) { //logic... }</code><br /> looking at the 
+                    code, you can see that we've replaced the while, with for, along with a couple 
+                    more statements in the parenthesis, "control variable", is a variable you'll use to control
+                    the loop, typically an int like <code>int i = 0</code>, as for the condition, in the
+                    context of a for loop, we normally compare i to another number, like <code> i < x</code>
+                    , and if the condition evaluates to true, then the loop executes. As for the third 
+                    statement, this is where you will update, typically, you gonna increment the control 
+                    variable, not strictly, but for a loop, this works well.. As a for loop general usage is 
+                    to repeat a task for a set amount of times, like <code>i++</code>, the variable name and
+                    2 plus sign next to it, this is called the incremant operator "++". Also suffix or 
+                    prefix does not matter, <code>++i</code> and <code>i++</code> will both works. You will
+                    also enclosed the loop in curly braces {}, but a fun fact is that you omit the braces, as
+                    in excluding the curly braces, but this will only works for a single statement only. If
+                    you have mutiple statments, only the first statement will be executed, this applies to 
+                    while loop, for, loop and if else statements.. Talk about if statement, we will get to them
+                    after 2 more kind of loop you need to know. And make sure you add ; after each statement
+                    in the for loop parenthesis, now we gonna talk about <code>range based loop</code><br />
+                    a range based for loop, is another kind of for loop, but slightly different. So Let's 
+                    dissect this one:<br /> <code>for (variable : collection) { //logic... }</code><br /> so in
+                    this snippet, we can see that is similar to a foor loop, but without any condition. Instead
+                    you can use this loop to iterate, traversing through a collection, in this case it can be
+                    an array, like <code>char name2[7] = { 't', 'a', 'r', 'r', 'a', 'n', 't' };</code><br />
+                    and the variable will be the element of the collection, that is, each character in this 
+                    array, starting from 0, and increment until all element has been going through, so if the
+                    array has 7 elements, then the loop runs 7 time, pretty cool right? You can do anything in
+                    the loop's body, which is the enclosed curly braces, so an example could be (char c : name2)
+                    , which you can use c in the loop. I can maybe change 't', the first element of the name2
+                    array, into 'b', that is only the case if you <code>&</code> as the variable's name prefix,
+                    that is, behind the name like &c, which let you change the corresponding element directly
+                    in the array. This is called a reference, and the ampersand '&', in this case is called the 
+                    address-of operator, without it, the variable would be a copy instead, which the changes 
+                    you make to the variable won't affect the element in that array. We will soon dive more into
+                    references, but now let's dive into the final loop variant<br /> the <code>do while
+                    </code> loop.. This loop is built different. Unlike other loops, the <code>do while</code> 
+                    executes the code block at least once, no matter what.<br /><br /> You write it like this:
+                    <pre><code>
+    do {
+       //logic..
+    } while (condition);
+    </code></pre>
+                    and again you can't forget the semicolon, the compiler's got standards, baby. And
+                    <br /> Here's what’s cool, the condition comes after the logic. So even if the condition 
+                    is false, the block gets one run. so you can call it a <code>while</code> loop that runs
+                    once regardless of conditions</p><br /></li>
+                <li><p>if, else, else if, switch</p><br /> these statements, are the gate keepers, law 
+                enforcements of your code.. You can't let every code execute, every parameter passing through,
+                can't let 3/2 going into the even number row. So now, let's get into the <code>if</code> 
+                statement. Let's say I have a variable: <code>bool flag = true;</code> <br /> now this variable
+                is a boolean, and its value equate to true. Now I have an if statement: <code>if (condition)
+                { //logic... }</code> <br /> familiar yet? We can check if flag is true or false, like if 
+                (flag == true), now this code, checks its value using "==" which is something called the equality
+                operator, which return true or false depending on, in this case, if flag == true. But if you
+                simply want to check if a boolean is true or not, simply use "!", like !flag to check if flag
+                is false, and simply put flag if you want to check if the value == true, (!flag), (flag)<br />
+                to understand these concepts more clearly, I also need to tell you about something called 
+                "truthy" and "falsy" values. Now, any integer that is not equal to 0, is truthy, that includes
+                some more data types, like float, double, which are built in number type like int, except the
+                value have decimal place, like 0.00, this applies for both float and double. Negative numbers
+                like -1, -3.00, are also considered to be truthy values. As for types like <code>string</code>
+                or <code>char</code>, which deals with letters, symbols, numbers enclosed in double quotation ""
+                for string, and '' for char, now an empty string is a falsy value, but for a char, it will 
+                throw an error. Now we won't get too in depth with them, but you wanna keep them in mind</li>
             </ol>
         </div>
     </main>
