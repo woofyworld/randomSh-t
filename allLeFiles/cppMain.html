@@ -24,6 +24,8 @@
 
     int main() {
         std::cout << "I AM THE GOD OF HELLFILE";
+
+        return 0;
     }
 </code></pre></li>
                 <li><p>
@@ -80,7 +82,7 @@
                     <code>int squaredNumber(int x) { return x*x; }</code><br /> so the anatomy of a valid
                     function, you'll need, the type, the name, "()" also called function call operator, 
                     and lastly, {} two curly braces. You can also take something called parameter, in 
-                    the parenthesis, like you've seen, (int x), this will specify the type when the value
+                    the parentheses, like you've seen, (int x), this will specify the type when the value
                     is passed to the parameter, when we pass a value to a function, it is called "argument"
                     <br /> for example i can do something like this: <code>int squared = 
                     squaredNumber(2);</code> <br /> and then I'll print it: <code>std::cout << squared 
@@ -124,7 +126,7 @@
                     dive into each of them, starting with the while loop:<br />
                     <pre><code>while (condition) { //logic...} </code></pre><br /> Now I'd think you can use
                     your intuition to understand the snippet, but I'll explain it. The anatomy of this loop
-                    statement, which includes a <code>while</code> keyword, and the parenthesis which contains 
+                    statement, which includes a <code>while</code> keyword, and the parentheses which contains 
                     the specific boolean expression that keeps the loop going.. if the expression, which is 
                     the condition, evaluates to true, then the loop will execute. It is like, while my car
                     has fuel, I can drive it. and then we have curly braces, which specify the scope of this
@@ -138,7 +140,7 @@
                     anatomy of the for loop is a bit more flexible comparing to the while loop: <br />
                     <code>for (control variable; condition; update) { //logic... }</code><br /> looking at the 
                     code, you can see that we've replaced the while, with for, along with a couple 
-                    more statements in the parenthesis, "control variable", is a variable you'll use to control
+                    more statements in the parentheses, "control variable", is a variable you'll use to control
                     the loop, typically an int like <code>int i = 0</code>, as for the condition, in the
                     context of a for loop, we normally compare i to another number, like <code> i < x</code>
                     , and if the condition evaluates to true, then the loop executes. As for the third 
@@ -152,7 +154,7 @@
                     you have mutiple statments, only the first statement will be executed, this applies to 
                     while loop, for, loop and if else statements.. Talk about if statement, we will get to them
                     after 2 more kind of loop you need to know. And make sure you add ; after each statement
-                    in the for loop parenthesis, now we gonna talk about <code>range based loop</code><br />
+                    in the for loop parentheses, now we gonna talk about <code>range based loop</code><br />
                     a range based for loop, is another kind of for loop, but slightly different. So Let's 
                     dissect this one:<br /> <code>for (variable : collection) { //logic... }</code><br /> so in
                     this snippet, we can see that is similar to a foor loop, but without any condition. Instead
@@ -180,7 +182,7 @@
                     <br /> Here's what’s cool, the condition comes after the logic. So even if the condition 
                     is false, the block gets one run. so you can call it a <code>while</code> loop that runs
                     once regardless of conditions</p><br /></li>
-                <li><p>if, else, else if, switch</p><br /> these statements, are the gate keepers, law 
+                <li><p>if, else, else if, switch <br /> these statements, are the gate keepers, law 
                 enforcements of your code.. You can't let every code execute, every parameter passing through,
                 can't let 3/2 going into the even number row. So now, let's get into the <code>if</code> 
                 statement. Let's say I have a variable: <code>bool flag = true;</code> <br /> now this variable
@@ -197,7 +199,66 @@
                 like -1, -3.00, are also considered to be truthy values. As for types like <code>string</code>
                 or <code>char</code>, which deals with letters, symbols, numbers enclosed in double quotation ""
                 for string, and '' for char, now an empty string is a falsy value, but for a char, it will 
-                throw an error. Now we won't get too in depth with them, but you wanna keep them in mind</li>
+                throw an error. Now we won't get too in depth with them, but you wanna keep them in mind. Next
+                is <code>else if</code>, now else if works just like if, except that else if is used <i>IF</i>
+                the first if statement equate to true, which the code moves on to the first else if statement,
+                if there are any, that is. And if the first else if equate to false again, then the code moves
+                    to the second else if, and so on.. You see the pattern? it continues the check until a 
+                    statement returns true. Now we have <code>else</code>, the main difference of else is that
+                    you can't provide any condition to it like if and else if, so no parentheses. It will be
+                    used if all of the if, else if statements returns false, which means none of the conditions 
+                    are met and therefore, else think, therefore else am..<br /> And lastly, we have the 
+                    <code>switch</code> statement, switch statement are like the swiss knife of conditional
+                    statement, and I'll explain why it is:<br /><pre>
+switch (expression) {
+    case constant1:
+        //Do something
+        break;
+    case constant2:
+        //Do something else
+        break;
+    default:
+        //Do this if none of the above cases match
+}
+</pre><br />now looking at the anatomy of the switch statement, you can think of it like, here's an expression. 
+                    Now go compare it to a bunch of predefined options (case) and execute whatever matches,
+                    and what does the expression represent in this case? It is not a condition, rather, The 
+                    expression inside a switch must evaluate to an integral or enumeration type.
+                    Meaning it’s gotta be something that can be measured in whole number, so for things like,
+                    int, char, enum, type modifiers like long, short, long long, signed, unsigned.. Okay, now
+                    I know I just randomly throw these terms to you, and you probably have no idea what they are
+                    but don't worry, we will get into them in another part, just know that these are basically
+                    different flavors of interger.. Now if I have an int variable, now I can check for each
+                    potential case where the int value, be it 1, 2, or 3, for each specific match, shall i 
+                    have a different approach to each case. That's the virtue of switch statement.. In the case
+                    like this, switch statement offer more readability and simplicity comparing to a chained
+                    if else statements. Now you also must have noticed the <code>break</code> statement, break
+                    statement is used to stop the execution of a code block, do you remember what a block is? It
+                    is where you group mutiple statements into a block using {}, which you can say the break 
+                    statement stops the execution in the scope where it is reside, this is to prevent further
+                    case check when a case are match. However, you can omit the break statement, which in this 
+                    case, is referring to something called "fall through", it symbol how the switch statement
+                    will fall through all the cases without the break statement.. Quite intuitive, and you can
+                    also group statements in a case using curly braces, as without it, only a statement which 
+                    ends at ";", will be executed, so use {} if you want mutiple statements to execute in a case.
+                    As for the last thing you wanna know, it will be the <code>default</code> case. A default
+                    case is identical to the else statement, it will executes when none of the cases match, so
+                    cases can be treat as if, else if, and default as else.</p>
+                </li>
+                <li><p>
+                    Well, well, well, looks like that sum
+                    it up, I recommend you to furtherly research on your own, about anything you find confusing
+                    , and to also write a program to exercise, I want you to write a program that counts from
+                    0 to 10, print each number, for odd numbers, label it as odd, and as for even, label it
+                    correspondingly, use your acquired knowledge.<br /> I also recommend to use one compiler to 
+                    write the code, it is on the web and it's quick and easy, as for long term you should use 
+                    visual studio, or visual studio code, but I'm not gonna tell you how, research it on your 
+                    own. (sorry for the passive aggressive tone, if you are still reading I just wanna let you 
+                    know that you are lovely and beautiful)
+                </p></li>
+            </ol>
+            <ol>
+                <li><h2>more on data types, type modifiers and variable</h2></li>
             </ol>
         </div>
     </main>
