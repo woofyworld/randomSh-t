@@ -259,73 +259,140 @@ switch (expression) {
             </ol>
             <ol>
                 <li><h2>more on types, type modifiers and variable</h2></li>
-                <li><h5 class="green-text">>fyi we're only like 1% in by now<br /> >this time to reinforce
-                    your knowledge on types<br /></h5> we have discussed about int, char, bool, a little bit
-                of float and double.. Now I'm gonna talk about <code>short, long, long long, unsigned</code> 
-                we're also gonna distinguish interger from floating point. Interger are whole number, which are
-                numbers without demcimal place. Now if you try to assign a floating point number, which is one
-                with decimal places, to an int, which is of interger type, will result in truncation of the
-                number. Which means that the decimal place will be removed:<code> 3.14 -> 3 </code><br /> so
-                <code>int i = 3.14</code> will simply be 3. The same will happen if you assign a whole number to
-                a float or a double, 3 -> 3.00.. This is called type conversion, which can be achieved manually 
-                or automatically. Now we know the differences, let's discuss <code>short, long, long long, 
-                unsigned</code><br /> These are called type modifier and belongs to the interger family, which 
-                mean you can only use them with int, or, standalone by themselves with exception of double, 
-                which you can use with long such as <code>long double</code>, as for short, it can be 
-                either <code>short</code> or <code>short int</code>, which is equivalent and the same applies
-                to all the one listed above, although for clarity, i recommend to specify the int like long int,
-                short int..<br /> Now what exactly are these type modifiers usage? So the maxium value a numeric
-                type can hold depending on how many bytes it can holds. A byte, as might have heard, can be 
-                kilobyte(kb), megabyte(mb), gigabyte(gb) and so.. In this case, 1000 bytes = 1kb, which is a lot
-                in our context, since an int is typically 4 bytes. For short int, it is only 2 bytes, but it 
-                holds much less value, a range of -32,768 to 32,767. As opposed to a normal int, which can hold
-                -2,147,483,648 to 2,147,483,648. We're currently talking in the context of signed intergers, 
-                which can hold negative numbers and positive numbers, as for <code>unsigned</code> intergers, it
-                is a bit different. As it can only holds positive numbers, so essentially, signed numbers split
-                into 2, a negative halve and a positive halve, so turn the negative half into positive and add
-                it to the other half, and then you have the unsigned range.. So unsigned are basically the 
-                absolute range, as absolute value are always positive.. SO if you assign a negative number to an
-                unsigned int, like -1, it will gives you 4294967295.. Which is the max range a normal int can 
-                hold minus 1, and if you put -2, then you get 4294967294. So there is some sort of type 
-                conversion plus how? I mean hey, you wouldn't want to assign a negative to an unsigned. So let's
-                just move on..<br /> Alright so unsigned short, long, long long are type modifier of interger, 
-                and their capacity, which is the maxium value range they can hold, depeneding on how many bytes 
-                they takes up, with short at the least, and long long at the most. You can also have unsigned 
-                short, unsigned long, unsigned long long..<br /> Now I won't get too deep with binary code, 
-                which are bits and bytes stores bits, base two number system which values are power of two's.
-                But maybe we will get to them <i>INT</i> the future<br /><br /> Now we have only spoke of 
-                type modifiers for interger, so let's get into floating point and character wise.<br /><br />
-                floating point numbers, where numbers gets more specific.. Now you need decimals to represent
-                something like, for example, <i>PI</i>, which is 3.1415926535.. approximately. When you have a
-                number like that, you gonna use a type of something called floating point, specifically, <code>
-                double</code>. Now in floating point numbers, there is something called precision, which the 
-                higher the precision, the more, well, self explanatory, precise the decimal places will be in 
-                the number. In the case of double, it can holds up to 15-16 decimal place of precision, while
-                <code>float</code> have only around 7 decimal place of precision. Which is why for things like
-                math constants and calculations, irrational numbers and such, typically uses double or long 
-                double so that the computation will be more accurate.. Now this might not be your biggest 
-                concern in the mean time, you definitely wants to look more into it. Now a fun fact is that int
-                and float both take the same amount of bytes, even though float is more complex and stores
-                decimals.. Which I won't explain because complex stuff.<br /><br /> Now let's get into.. Unicode
-                realm: <code>signed char | unsigned char | wchar_t | char16_t | char32_t </code><br /> So let's
-                first understand character encoding standards.. ASCII and Unicode. The two holy grail of 
-                character encoding. ASCII is short for "American Standard Code for Information Interchange" and
-                Unicode means "Universal character encoding", now you know, when the internet wasn't as wide
-                spread and having such a gigantic ecosystem, being extremely complex as it is now.. Ascii was 
-                pretty fine. Just English was fine, just Emoticons was fine ;) ... But then came emojis, then
-                it came Arabic, Japanese, Chinese, Math symbols.. All sort of things that Ascii couldn't handle
-                and so forth, came Unicode, and that's it you don't expect me to explain the entire history 
-                right?<br /> Now char can also be signed or unsigned.. Which you should get it by now, or not, 
-                well, it is not the most important thing to understand now. But did you know you can assign 
-                numbers to char? Yes that's right you can do something like <code>char c = 65;</code><br /> and
-                when you print it, you'll get.. "A", and you can actually assign a character to an int, and you
-                will get the character corresponding to that number.. So how?? Well, Ascii have 128 unique
-                characters, including numbers and symbols. So when you assign a number to a char, that number 
-                will be converted into the corresponding character based on the Ascii order. And char, are 
-                neither signed or unsigned by default, it actually depends on the compiler. And that might just
-                be the only usage you'd see from signed and unsigned char for now.. Let's now move onto wchar_t
-                , now <code>wchar_t</code>
+                <li>
+                    <h5 class="green-text">
+                        >fyi we're only like 1% in by now<br /> >this time to reinforce
+                        your knowledge on types<br />
+                    </h5> we have discussed about int, char, bool, a little bit
+                    of float and double.. Now I'm gonna talk about <code>short, long, long long, unsigned</code>
+                    we're also gonna distinguish interger from floating point. Interger are whole number, which are
+                    numbers without demcimal place. Now if you try to assign a floating point number, which is one
+                    with decimal places, to an int, which is of interger type, will result in truncation of the
+                    number. Which means that the decimal place will be removed:<code> 3.14 -> 3 </code><br /> so
+                    <code>int i = 3.14</code> will simply be 3. The same will happen if you assign a whole number to
+                    a float or a double, 3 -> 3.00.. This is called type conversion, which can be achieved manually
+                    or automatically. Now we know the differences, let's discuss <code>
+                        short, long, long long,
+                        unsigned
+                    </code><br /> These are called type modifier and belongs to the interger family, which
+                    mean you can only use them with int, or, standalone by themselves with exception of double,
+                    which you can use with long such as <code>long double</code>, as for short, it can be
+                    either <code>short</code> or <code>short int</code>, which is equivalent and the same applies
+                    to all the one listed above, although for clarity, i recommend to specify the int like long int,
+                    short int..<br /> Now what exactly are these type modifiers usage? So the maxium value a numeric
+                    type can hold depending on how many bytes it can holds. A byte, as might have heard, can be
+                    kilobyte(kb), megabyte(mb), gigabyte(gb) and so.. In this case, 1000 bytes = 1kb, which is a lot
+                    in our context, since an int is typically 4 bytes. For short int, it is only 2 bytes, but it
+                    holds much less value, a range of -32,768 to 32,767. As opposed to a normal int, which can hold
+                    -2,147,483,648 to 2,147,483,648. We're currently talking in the context of signed intergers,
+                    which can hold negative numbers and positive numbers, as for <code>unsigned</code> intergers, it
+                    is a bit different. As it can only holds positive numbers, so essentially, signed numbers split
+                    into 2, a negative halve and a positive halve, so turn the negative half into positive and add
+                    it to the other half, and then you have the unsigned range.. So unsigned are basically the
+                    absolute range, as absolute value are always positive.. SO if you assign a negative number to an
+                    unsigned int, like -1, it will gives you 4294967295.. Which is the max range a normal int can
+                    hold minus 1, and if you put -2, then you get 4294967294. So there is some sort of type
+                    conversion plus how? I mean hey, you wouldn't want to assign a negative to an unsigned. So let's
+                    just move on..<br /> Alright so unsigned short, long, long long are type modifier of interger,
+                    and their capacity, which is the maxium value range they can hold, depeneding on how many bytes
+                    they takes up, with short at the least, and long long at the most. You can also have unsigned
+                    short, unsigned long, unsigned long long..<br /> Now I won't get too deep with binary code,
+                    which are bits and bytes stores bits, base two number system which values are power of two's.
+                    But maybe we will get to them <i>INT</i> the future<br /><br /> Now we have only spoke of
+                    type modifiers for interger, so let's get into floating point and character wise.<br /><br />
+                    floating point numbers, where numbers gets more specific.. Now you need decimals to represent
+                    something like, for example, <i>PI</i>, which is 3.1415926535.. approximately. When you have a
+                    number like that, you gonna use a type of something called floating point, specifically, <code>
+                        double
+                    </code>. Now in floating point numbers, there is something called precision, which the
+                    higher the precision, the more, well, self explanatory, precise the decimal places will be in
+                    the number. In the case of double, it can holds up to 15-16 decimal place of precision, while
+                    <code>float</code> have only around 7 decimal place of precision. Which is why for things like
+                    math constants and calculations, irrational numbers and such, typically uses double or long
+                    double so that the computation will be more accurate.. Now this might not be your biggest
+                    concern in the mean time, you definitely wants to look more into it. Now a fun fact is that int
+                    and float both take the same amount of bytes, even though float is more complex and stores
+                    decimals.. Which I won't explain because complex stuff.<br /><br /> Now let's get into.. Unicode
+                    realm: <code>signed char | unsigned char | wchar_t | char16_t | char32_t </code><br /> So let's
+                    first understand character encoding standards.. ASCII and Unicode. The two holy grail of
+                    character encoding. ASCII is short for "American Standard Code for Information Interchange" and
+                    Unicode means "Universal character encoding", now you know, when the internet wasn't as wide
+                    spread and having such a gigantic ecosystem, being extremely complex as it is now.. Ascii was
+                    pretty fine. Just English was fine, just Emoticons was fine ;) ... But then came emojis, then
+                    it came Arabic, Japanese, Chinese, Math symbols.. All sort of things that Ascii couldn't handle
+                    and so forth, came Unicode, and that's it you don't expect me to explain the entire history
+                    right?<br /> Now char can also be signed or unsigned.. Which you should get it by now, or not,
+                    well, it is not the most important thing to understand now. But did you know you can assign
+                    numbers to char? Yes that's right you can do something like <code>char c = 65;</code><br /> and
+                    when you print it, you'll get.. "A", and you can actually assign a character to an int, and you
+                    will get the character corresponding to that number.. So how?? Well, Ascii have 128 unique
+                    characters, including numbers and symbols. So when you assign a number to a char, that number
+                    will be converted into the corresponding character based on the Ascii order. And char, are
+                    neither signed or unsigned by default, it actually depends on the compiler. And that might just
+                    be the only usage you'd see from signed and unsigned char for now.. Let's now move onto wchar_t
+                    , now <code>wchar_t</code> is a built in type used to represent wide characters. In
+                    contrast to char which is typically an 8 bit type designed mainly for Ascii or other single
+                    byte encodings, wchar_t is intended to handle larger encoding sets, especially those needed
+                    in globalized applications. Essentially, it’s your tool for representing characters that
+                    cannot be captured by the traditional 8 bit char. SO wide chars can store Ascii and unicode
+                    characters, but not all, well, if you wanna know more i suggest looking into it.<br /> There
+                    are some encoding when it comes to unicode like: UTF-8, UTF-16, UTF-32. now imagine unicode
+                    as a phonebook where every character in the world has a unique ID number called a code point
+                    . Like A = U+0041, 你 = U+4F60, 😏 = U+1F60F.. And so on, but how do we store these IDs 
+                    in memory? That’s where UTF 8/16/32 come in.. So UTF 8 is mostly used for Ascii, like simple
+                    characters, english, emoticons and stuff like that, takes around 1 to 4 bytes. UTF 16 is
+                    usually used for languages like Arabic, Japanese, Korean, Chinese, because it is faster in
+                    some cases, takes 2 to 4 bytes. UTF 32 are pretty much the same as UTF 8 and 16 except that
+                    every character = 4 bytes. So their main differences laid in, space taken(bytes), speed,
+                    so yes, UTF 8 is more preferred, because it is more simple, takes less space...<br /> And
+                    thus you have <code>char16_t, char32_t</code>, which ties to UTF 16 and UTF 32 respectively.
+                    TO wrap it up: <code>char = UTF 8, wchar = UTF 16 or UTF 32, char16_t = UTF 16, 
+                    char32_t = UTF 32.</code><br /> Now char is almost always your best friend, but others are 
+                    not useless either... If you wanna learn more about them then search it up, i only cover 
+                    the basic concept. Now, looks like we're gonna move to an universally known type..
                 </li>
+                <li>
+                <h3>STRING</h3><br /><br /><p>We have talked about char, and how you can use it to store
+                    characters, symbols, numbers as text. But here are a type, makes it more simple and straight
+                    forward to store about just anything you type into it.. The <code>string</code> type. Now 
+                    string are more straight forward in, perhaps you have heard of, Javascript, Java, Python, 
+                    Ruby. But here, I know you need a bit more sharpening, so let's dive into string. We gonna 
+                    first talk about C style string vs C++ style string, so C style string look like this:<code>
+                    char c[] = "anders";</code> or <code>char c[] = {'p', 'a', 't', 'r', 'i', 'c', 'k', '\0'};
+                    </code><br /> And yes, you can use "" also called string literal, with char type, same with
+                    when using a pointer, which we gonna explain more later. Now one thing to be remember is 
+                    that, manual char array using {}, needs to include this character '\0' which is called null
+                      terminated character, typically at the end of the array. Now this character is used to 
+                      mark the end of the string. So if you print it, it will not print the characters that 
+                      comes after the '\0', so you should use it wisely. Now comes C++ String, which is a bit 
+                      more simple and flexible, and to declare a string variable:<code>std::string name = 
+                    "breivik";</code><br />  Now string in C++ are a part of the standard library, and in itself
+                      , a class, that is why you use std::string. Now classes is still an undisclosed concept in 
+                      this page, but soon. Now when we think of a string, we can think of it as more like an 
+                      array of characters, now at the same time, arrays are contiguous in memory, so contiguous 
+                      memory, you can think of as if we have an array of characters, then those characters are 
+                      stored next to each other in the same memory location. We call this contiguous block of 
+                      memory, and elements, the things like characters, or interger, are stored within that same
+                      block of memory. Now another fun fact is that once you have the location of an element, you
+                      can access the rest of the elements in that memory block, but I won't get into it 
+                      specifically at the moment. I will explain memory address in Pointer and reference section.
+                      <br /><br />Strings have a variety of methods, also known as member functions, which is 
+                      class related, now we gonna get into some basic methods, the first one is: <code>size
+                    </code><br /> now size() can be used to get the amount of elements, stored in the object, in
+                      this case, can be a string. <code>name.size()</code> example. There is also length(), which
+                      is exclusively used for strings, but they both do the same thing, and return the same type,
+                      Called size_t, which is an unsigned interger type. Now we move on to: <code>empty</code>
+                      <br /> empty() returns true or false depending on whether the object is... Empty or not,
+                      which means whether there are any character in the string. Now the next method:<code>
+                    at</code>, now at(index), let you select an element from the specified index, an example is,
+                      if I have a string called greet with value "hi", and i print: greet.at(1), then I'll get:
+                      i. This is more safe than subscripting in which you use the [].<br /> Next we have: <code>
+                    clear</code>, now clear(), like the name suggest, it clears the object, which is the string.
+                    <br /><br /> And well now... That's some of the basic methods of the string type. There are
+                      many more but I won't list all of them, i recommend you looking up everything i taught you
+                      for better clarity. And to also use these string methods, you need to include the string
+                      header &lt;string&gt;, to use the string's methods. 
+                </p></li>
             </ol>
         </div>
     </main>
