@@ -352,7 +352,7 @@ switch (expression) {
                     the basic concept. Now, looks like we're gonna move to an universally known type..
                 </li>
                 <li>
-                <h3>STRING</h3><br /><br /><p>We have talked about char, and how you can use it to store
+                <h3>STRING</h3><br /><p>We have talked about char, and how you can use it to store
                     characters, symbols, numbers as text. But here are a type, makes it more simple and straight
                     forward to store about just anything you type into it.. The <code>string</code> type. Now 
                     string are more straight forward in, perhaps you have heard of, Javascript, Java, Python, 
@@ -393,6 +393,67 @@ switch (expression) {
                       for better clarity. And to also use these string methods, you need to include the string
                       header &lt;string&gt;, to use the string's methods. 
                 </p></li>
+                <li><p>
+                    So the summary of the section we've just learned: 
+                    1.	Integer Types:<br />
+                    •	int: Represents whole numbers (e.g., int i = 3;). Assigning a floating point 
+                    number to an int truncates the decimal part (e.g., 3.14 -> 3).<br />
+                    2.	Type Modifiers:<br />
+                    •	short, long, long long, unsigned: These modify the size or range of integers.<br />
+                    •	Example:<br />
+                    •	short int: 2 bytes, range: -32,768 to 32,767.<br />
+                    •	long int: 4 bytes or more, range: larger than int.<br />
+                    •	unsigned int: Only positive values, effectively doubling the positive range.<br />
+                    •	Unsigned Behavior: Assigning a negative value to an unsigned type results in 
+                    unexpected values (unsigned int x = -1; gives 4294967295).<br />
+                    3. Floating Point Types<br />
+                    •	Types:<br />
+                    •	float: ~7 decimal places of precision.<br />
+                    •	double: ~15-16 decimal places of precision.<br />
+                    •	long double: Higher precision than double.<br />
+                    •	Use Case: Use double for precise calculations(math constants like π).<br />
+                    4. Character Types
+                    •	ASCII and Unicode:<br />
+                    •	ASCII: Limited to 128 characters (English letters, numbers, symbols).<br />
+                    •	Unicode: Supports global characters (e.g., emojis, non-English scripts).<br />
+                    •	Character Types:<br />
+                    •	char: Typically 1 byte, used for ASCII characters.<br />
+                    •	wchar_t: Wide character type for Unicode.<br />
+                    •	char16_t and char32_t: For UTF-16 and UTF-32 encoding, respectively.<br />
+                    •	Fun Fact: You can assign numbers to char (e.g., char c = 65; results in 'A')<br />
+                    5. Bytes and Memory<br />
+                    •	Bytes: A byte is a unit of memory (e.g., int is typically 4 bytes). Larger types (long
+                    long) take more bytes and can store larger values.<br />
+                    •	Binary Representation: Numbers are stored in binary (base-2), with values as powers 
+                    of 2.<br />
+                    •	Contiguous Memory: Arrays store elements next to each other in memory.<br />
+                    and thus we concluded...
+            </p></li>
+            </ol>
+            <ol>
+                <li><h2>pointers, references, more operators</h2></li>
+                <li>
+                    <p>
+                        <h5 class="green-text">
+                            >we're getting into the deep end<br />
+                            >you might wanna take a break<br />
+                            >but if you are still here, then let's go<br />
+                        </h5>
+                        pointers, references, and operators.. Now these are some of the most important concepts
+                        in C++, and they are also the most confusing ones. So let's get into it. First off,
+                        pointers. Pointers are variables that store memory addresses. They point to the location
+                        of another variable in memory, this allows you to manipulate data directly in memory,
+                        which can be very powerful. To declare a pointer, you use the <code>*</code> symbol:
+                        <code>int* ptr;</code> This declares a pointer to an integer. To assign a value to a
+                        pointer, you use the address of operator <code>&</code>: <code>ptr = &i;</code> This assigns
+                        the address of the variable <code>i</code> to the pointer <code>ptr</code>. You can then
+                        dereference the pointer using the <code>*</code> operator: <code>*ptr = 10;</code> This sets
+                        the value of <code>i</code> to 10. Pointers can also be used with arrays, as arrays are
+                        essentially pointers to the first element of the array. You can access elements of an
+                        array using pointers like this: <code>arr[i] = *(ptr + i);</code>
+                        <br /><br /> 
+                    </p>
+                </li>
             </ol>
         </div>
     </main>
