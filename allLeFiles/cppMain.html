@@ -266,7 +266,7 @@ switch (expression) {
                     </h5> we have discussed about int, char, bool, a little bit
                     of float and double.. Now I'm gonna talk about <code>short, long, long long, unsigned</code>
                     we're also gonna distinguish interger from floating point. Interger are whole number, which are
-                    numbers without demcimal place. Now if you try to assign a floating point number, which is one
+                    numbers without decimal place. Now if you try to assign a floating point number, which is one
                     with decimal places, to an int, which is of interger type, will result in truncation of the
                     number. Which means that the decimal place will be removed:<code> 3.14 -> 3 </code><br /> so
                     <code>int i = 3.14</code> will simply be 3. The same will happen if you assign a whole number to
@@ -448,10 +448,72 @@ switch (expression) {
                         pointer, you use the address of operator <code>&</code>: <code>ptr = &i;</code> This assigns
                         the address of the variable <code>i</code> to the pointer <code>ptr</code>. You can then
                         dereference the pointer using the <code>*</code> operator: <code>*ptr = 10;</code> This sets
-                        the value of <code>i</code> to 10. Pointers can also be used with arrays, as arrays are
-                        essentially pointers to the first element of the array. You can access elements of an
-                        array using pointers like this: <code>arr[i] = *(ptr + i);</code>
-                        <br /><br /> 
+                        the value of <code>i</code> to 10. Now I'm gonna tell you what dereference means.. it
+                        is basically the process of accessing the value stored at the memory address that the
+                        pointer is pointing to. So when you dereference a pointer, you are accessing the value
+                        of the variable that the pointer is pointing to. This is useful when you want to modify the
+                        value of a variable without directly accessing it, but yeah memory address is a bit
+                        confusing, so let's just say that a pointer is a variable that stores the address of
+                        another variable, like i won't get into the details of how memory works, but just know
+                        that pointers are used to access and manipulate data in memory, and memory here is
+                        basically a place where data is stored, like the RAM in your computer.<br /> Pointers
+                        can also be used with arrays, as arrays are essentially pointers to the first element
+                        of the array. You can access elements of an array using pointers like this: <code>
+                            arr[i] = *(ptr + i);
+                        </code><br /> This accesses the element at i position in <code>
+                            arr 
+                        </code> using the pointer <code>ptr</code>, and if you're wondering how this works,
+                        it is because the name of the array is a pointer to the first element of the array, so
+                        when you add <code>i</code> to the pointer, it moves the pointer to the i-th element,
+                        and then you dereference it to get the value. This is called pointer arithmetic, 
+                        it allows you to perform arithmetic operations on pointers, like adding or subtracting
+                        ... And hopefully that make some sense to you, if not, don't worry, it will come
+                        . Now pointers can also be used with
+                        functions, allowing you to pass variables by reference, this means that you can
+                        modify the value of a variable in a function without returning it. To do this, you
+                        use the <code>&</code> operator when declaring the function parameter: <code>
+                        void func(int& i) { i = 10; } </code><br /> This allows you to modify the value of 
+                        <code>i</code> in the function without returning it, and you can also use pointers to 
+                        dynamically allocate memory using the <code>new</code> operator: <code> int *dynamicNum
+                        = new int;</code> This allocates memory for an integer and assigns the address to the pointer
+                        <code>dyanamicNum</code>, you can then use the pointer to access the memory: <code>*
+                        dynamicNum = 10;</code> This sets the value of the memory to 10, and then you need to
+                        deallocate the memory using the <code>delete</code> operator: <code>delete dynamicNum;
+                        </code><br /> now deallocate, free, delete, they all kinda mean the same thing, but 
+                        delete is the one you use in C++. This frees the memory that was allocated for the 
+                        pointer, and you should always deallocate memory that you allocate with <code>new
+                        </code> to avoid memory leaks, which is when memory is allocated but not deallocated
+                        because of skill issue.. Just kidding but not really, it is a common mistake but 
+                        we gonna dive more into memory management later.<br /> Now also, when you have a 
+                        pointer, but you don't want to use it anymore, you can set it to <code>nullptr</code>
+                        <br /> which can also be used as a placeholder for a pointer that doesn't point to
+                        anything. This is useful for checking if a pointer is valid or not, beside nullptr
+                        , you can also use <code>NULL</code>, which is a macro that represents a null pointer
+                        . Now macro is a preprocessor directive that defines a constant value, and while it
+                        sound like what??, it is actually pretty simple. A macro is just a way to define a constant
+                        value that can be used throughout your code, and preprocessor directives are instructions  
+                        that are processed before the code is compiled. So when you use a macro, the preprocessor
+                        replaces the macro with its value before the code is compiled. This is useful for defining
+                        constants that you want to use throughout your code, like <code>PI</code>, which is a
+                        constant like you know... We gonna discuss more about these stuff in future chapters.
+
+                        <br /><br />
+                    </p>
+                </li>
+                <li>
+                    <h4>References</h4>
+                    <p>
+                        What if sometimes, you have a dog, named, maybe "Blondi" or something, and you want to
+                        another name, like a nickname, but you don't want to change the original name, you
+                        just want to give it a an alias... Right, so you can do that with references. A
+                        reference is an alias for a variable, it allows you to create a new name for an
+                        existing variable.<br /> To declare a reference, you use the <code>&</code> symbol, 
+                        which hopefully, you already get used to because we have mentioned it before: <code>
+                        int& ref = i;</code> This creates a reference to the variable <code>i</code>. You can
+                        then use the reference to access the value of the variable: <code>ref = 10;</code>
+                        This sets the value of <code>i</code> to 10, and yes, reference needs to have the
+                        same type as the variable it is referencing, just like pointers.
+
                     </p>
                 </li>
             </ol>
