@@ -507,13 +507,57 @@ switch (expression) {
                         another name, like a nickname, but you don't want to change the original name, you
                         just want to give it a an alias... Right, so you can do that with references. A
                         reference is an alias for a variable, it allows you to create a new name for an
-                        existing variable.<br /> To declare a reference, you use the <code>&</code> symbol, 
+                        existing variable.<br /> To declare a reference, you use the <code>&</code> symbol,
                         which hopefully, you already get used to because we have mentioned it before: <code>
-                        int& ref = i;</code> This creates a reference to the variable <code>i</code>. You can
+                            int& ref = i;
+                        </code> This creates a reference to the variable <code>i</code>. You can
                         then use the reference to access the value of the variable: <code>ref = 10;</code>
                         This sets the value of <code>i</code> to 10, and yes, reference needs to have the
-                        same type as the variable it is referencing, just like pointers.
-
+                        same type as the variable it is referencing, just like pointers. <br /> Now references
+                        are useful for passing variables to functions without copying them, this is similar
+                        to pointers, but references are easier to use and less error prone, and performance
+                        wise, this is also better than passing by value, because it doesn't require copying
+                        the variable, which can be expensive for large objects. So when you pass a variable
+                        by reference, you are passing the address of the variable, not a copy of it. This
+                        allows you to modify the value of the variable in the function without returning it,
+                        though yes beaware that by doing so, you are modifying the original variable, so be
+                        careful when using references. Here is an example of passing a variable by reference:
+                        <br /> <code> void func(std::string& name) { name = "Eva"; } </code> <br /> now
+                        hopefully you understood that, because I'm telling you, intuition is the key here
+                        .<br /> So now, you may be wondering, what's the difference between pointers and
+                        references? Well, the main difference is that pointers can be null(remember nullptr?),
+                        while references has to be initalized straight away, like it can't be empty or null,
+                        and you can't reassign a reference to another variable, once it is assigned, it is
+                        assigned, so pointers might be more flexible, but references are safer and easier to
+                        use in a sense of way, so both has their own niche you know.. <br /> And also,
+                        references are automatically dereferenced, so you don't need to use the <code>*</code>
+                        operator to access the value of the variable, you can just use the reference name
+                        directly. This makes references easier to use than pointers, and you can also use
+                        references with arrays, just like pointers, you can use references to access elements
+                        of an array: <code>arr[i] = ref;</code> this accesses the element at i position in
+                        <code>arr</code> using the reference <code>ref</code>. SO yeah, references are
+                        pretty cool, and they are used a lot in c++. They are especially useful
+                        when you want to pass large objects to functions without copying them, and they are
+                        also used in operator overloading, which is a way to define how operators work with
+                        user defined types, which, is another topic of discussion, but we will get into it.
+                        Now talk about operators, shall we dive into it? <br />
+                    </p>
+                </li>
+                <li>
+                    <h4>All(almost) about Operators</h4>
+                    <p>
+                        <h5 class="green-text">>what do you know about operators?</h5>
+                        You have used operators for, maybe in math, and math is a big part of programming.
+                        Infact, programming is math, like you know binary and all that, and how binary are
+                        just powers of 2, and how everything is just math. So basically, programming is math
+                        , and operators are a big part of math. Okay maybe not all math but
+                        definitely some crucial parts of it. So let's get into it. First off, we have
+                        arithmetic operators, which are used for basic math operations like addition,
+                        substraction, multiplication, and division. These are the most common operators you
+                        will use in programming, and they are pretty simple to understand. So just in C++
+                        alone we have: <code> +, -, *, /, %</code> which are addition, substraction, and
+                        multiplication, division, and modulus respectively. Now these operators are largely
+                        the same as in math, and as well as in other programming languages.
                     </p>
                 </li>
             </ol>
