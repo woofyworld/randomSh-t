@@ -8,7 +8,7 @@
 <body>
     <main>
         <h1>The CPP experience</h1>
-        <div id="main-wrapper">
+        <div class="main-wrapper">
             <h3>Introduction</h3>
             <p>
                 C++ is a really good language, there is C++ everywhere!
@@ -551,13 +551,43 @@ switch (expression) {
                         Infact, programming is math, like you know binary and all that, and how binary are
                         just powers of 2, and how everything is just math. So basically, programming is math
                         , and operators are a big part of math. Okay maybe not all math but
-                        definitely some crucial parts of it. So let's get into it. First off, we have
+                        definitely some crucial parts of it. So let's get into it. Now here we have
                         arithmetic operators, which are used for basic math operations like addition,
                         substraction, multiplication, and division. These are the most common operators you
                         will use in programming, and they are pretty simple to understand. So just in C++
                         alone we have: <code> +, -, *, /, %</code> which are addition, substraction, and
                         multiplication, division, and modulus respectively. Now these operators are largely
                         the same as in math, and as well as in other programming languages.
+                        <br /> Now the modulus operator is used to get the remainder of a division
+                        operation, so for example, if you have <code>17 % 2</code>, it will return 1, because
+                        17 divided by 2 is 8 with a remainder of 1, so this is useful for checking if a number
+                        is even or odd, like if a number is divisible by 2, then it is even, otherwise it is
+                        odd. So you can use the modulus operator to check if a number is even or odd, like
+                        this: <code>if (num % 2 == 0) { //even } else { //odd }</code> This checks if the
+                        number is, well, even or odd... Now here is the thing, for an expression like that,
+                        can be simplified by using the ternary operator, which is a shorthand way of writing
+                        an if else statement, and it looks like this: <code>condition ? true : false</code>
+                        <br /> So you can write the above expression like this: <code>num % 2 == 0 ? //even :
+                        //odd</code> This is a shorthand way of writing an if else statement, and it is
+                        pretty simple and useful. <br /><br /> Now we also have increment and decrement 
+                        operators, which are used to increase or decrease the value of a variable by 1. And
+                        you have actually seen it before, like <code>i++</code> or <code>++i</code>, which 
+                        are the increment operators, and the same thing can be said for decrement operators
+                        <code>i--</code> or <code>--i</code>. Now you may have notice the ++ or -- being
+                        placed before the i or after the i, which i will explain now. the first one is 
+                        a prefix operator, which means it will increment or decrement the value before using 
+                        it, while the other one is a postfix operator, which means it will increment or 
+                        decrement the value after using it. So for example, if you have <code>int i = 5;
+                        </code> and you do <code>int j = ++i;</code>, then <code>j</code> will be 6, because
+                        the value of <code>i</code> is incremented before it is assigned to <code>j</code>.
+                        But if you do <code>int j = i++;</code>, then <code>j</code> will be 5, because the
+                        value of <code>i</code> is incremented after it is assigned to <code>j</code>. So
+                        this is a pretty important concept to understand, because at first i was confused
+                        and thought they were the same and like it is just a matter of preference but 
+                        actually it is not, and it can lead to some unexpected results if you don't 
+                        understand it. So just remember that prefix operators increment or decrement the
+                        value before using it, while postfix operators increment or decrement the value 
+                        after using it.<br /><br />
                     </p>
                 </li>
             </ol>
