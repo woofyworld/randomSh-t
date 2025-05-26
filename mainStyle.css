@@ -5,6 +5,14 @@ main {
     font-size: large;
     color:olivedrab;
 }
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
 li {
     background-color: #f0e0d6;
     border-color: #d9bfb7;

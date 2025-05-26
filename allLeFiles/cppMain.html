@@ -15,6 +15,10 @@
                 Made by the ultimate giga chad Bjarne Stroustrup at bell labs. So likewise, you wanna get
                 into C++? I'm 'bout to tell you, it <b>ain't easy</b>. But It ain't impossible either
             </p>
+            <div class="box">
+                <h3><a href="../index.html">go back to main</a></h3>
+                <h3><a href="../cppMain2.html">go to page 2</a></h3>
+            </div>
             <ol>
                 <li><h2>I AM THE GOD OF HELLFILE, AND I BRING YOU.. FILE </h2></li>
                 <li><p>So what on earth is this? hello world is generic.. SO let's print something 
@@ -567,27 +571,99 @@ switch (expression) {
                         number is, well, even or odd... Now here is the thing, for an expression like that,
                         can be simplified by using the ternary operator, which is a shorthand way of writing
                         an if else statement, and it looks like this: <code>condition ? true : false</code>
-                        <br /> So you can write the above expression like this: <code>num % 2 == 0 ? //even :
-                        //odd</code> This is a shorthand way of writing an if else statement, and it is
-                        pretty simple and useful. <br /><br /> Now we also have increment and decrement 
+                        <br /> So you can write the above expression like this: <code>
+                            num % 2 == 0 ? //even :
+                            //odd
+                        </code> This is a shorthand way of writing an if else statement, and it is
+                        pretty simple and useful. <br /><br /> Now we also have increment and decrement
                         operators, which are used to increase or decrease the value of a variable by 1. And
-                        you have actually seen it before, like <code>i++</code> or <code>++i</code>, which 
+                        you have actually seen it before, like <code>i++</code> or <code>++i</code>, which
                         are the increment operators, and the same thing can be said for decrement operators
                         <code>i--</code> or <code>--i</code>. Now you may have notice the ++ or -- being
-                        placed before the i or after the i, which i will explain now. the first one is 
-                        a prefix operator, which means it will increment or decrement the value before using 
-                        it, while the other one is a postfix operator, which means it will increment or 
-                        decrement the value after using it. So for example, if you have <code>int i = 5;
+                        placed before the i or after the i, which i will explain now. the first one is
+                        a prefix operator, which means it will increment or decrement the value before using
+                        it, while the other one is a postfix operator, which means it will increment or
+                        decrement the value after using it. So for example, if you have <code>
+                            int i = 5;
                         </code> and you do <code>int j = ++i;</code>, then <code>j</code> will be 6, because
                         the value of <code>i</code> is incremented before it is assigned to <code>j</code>.
                         But if you do <code>int j = i++;</code>, then <code>j</code> will be 5, because the
                         value of <code>i</code> is incremented after it is assigned to <code>j</code>. So
                         this is a pretty important concept to understand, because at first i was confused
-                        and thought they were the same and like it is just a matter of preference but 
-                        actually it is not, and it can lead to some unexpected results if you don't 
+                        and thought they were the same and like it is just a matter of preference but
+                        actually it is not, and it can lead to some unexpected results if you don't
                         understand it. So just remember that prefix operators increment or decrement the
-                        value before using it, while postfix operators increment or decrement the value 
-                        after using it.<br /><br />
+                        value before using it, while postfix operators increment or decrement the value
+                        after using it.<br /><br /> Now up next we have comparison operators, which are
+                        used to compare two values and return a boolean value, which is either true or false.
+                        Now you might or might not have heard of boolean expression before, but it is
+                        basically an expression that evaluates to true or false, and it is used a lot in
+                        programming, especially in conditional statements like if statements. So the
+                        comparison operators are: <code>==, !=, <,>, <=, >=</code>, which are equal to,
+                        not equal to, less than, greater than, less than or equal to, and greater than or
+                        equal to respectively. Now the type in which these operators return is gonna be
+                        boolean, which is pretty straightforward, example is <code>
+                            if (a == b)
+                            { //do something }
+                        </code> This checks if <code>a</code> is equal to <code>b</code>.
+                        In the case where you just want to return a boolean value, you can just write
+                        <code>return a == b;</code><br /> you can also use parentheses to group expressions
+                        like this: <code>return ((a == b) && (c != d));</code><br> This checks if
+                        <code>a</code> is equal to <code>b</code> and <code>c</code> is not equal to
+                        <code>d</code>, so yes likwise, these operators are quite flexible and can be
+                        used in many ways, and they are pretty simple to understand. <br /><br /> Now we
+                        have logical operators, which are used to combine boolean expressions and return a
+                        boolean value. And since we're talking about LOGICAL operators, we gonna be logical
+                        as well, so the logical operators are: <code>&&, ||, !</code>, which when we translate
+                        them to something you 'n i can understand, are AND, OR, NOT. So the AND operator
+                        <code>&&</code> returns true if both expressions are true, the OR operator
+                        <code>||</code> returns true if at least one expression is true, and the NOT
+                        operator <code>!</code> returns true if the expression is false, and vice versa,
+                        and perhaps we can even count in | and &amp; as bitwise operators, but these are
+                        pretty uncommmon so we gonna save space for that later on.<br /> SO yes I believe
+                        the operators are pretty self explanatory, and you can use them in many ways,
+                        like combining boolean expressions, or checking conditions in if statements, or
+                        even using them in loops. Alright now let's see how many operators we have left
+                        to cover, so we have covered arithmetic operators, increment and decrement
+                        operators, comparison operators, and logical operators, some ternary, which are pretty
+                        sufficient for now when it comes to operators although there is more. We gonna explore
+                        more about operators in future chapters, like bitwise operators, assignment,
+                        operations with pointers, and operator overloading, which is a way to define how
+                        operators work with user defined types, and it is a pretty advanced topic.
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        some reflections and conclusion
+                    </h2>
+                    <p>
+                        Well, well, well done my disciple, you have made it to the end of this current page
+                        and you have learned a lot about cpp(c++) so far. You have learned about types, type
+                        modifiers, variables, pointers, references, and operators. You have also learned
+                        about strings, and how to use them in c++. You have learned about the differences
+                        between c style strings and c++ style strings, and how to use the string class
+                        in c++. You have also learned about the basic methods of the string class, and how
+                        to use them. You have also learned about the differences between pointers and
+                        references, and how to use them in c++. You have also learned about the different
+                        types of operators in c++, and how to use them in your code. You also learned about
+                        the importance of understanding these concepts, and how they are used in c++. Right?
+                        Hopefully you did learned something I mean, you have read this far, so you must
+                        absorbed something right?<br /><br /> So likewise, it wasn't exactly that long but
+                        i still want to congratulate you for making it this far, now I have some exercises
+                        for you to practice what you have learned: <br /> <!-- in a bulletpoint list-->
+                        <ol>
+                            <li>Write a program that declares a variable of each type we have discussed so far,
+                                and print their values.</li>
+                            <li>Write a program that uses pointers to swap the values of two variables</li>
+                            <li>Write a program that uses references to swap the values of two variables</li>
+                            <li>Write a program that uses strings to store and manipulate text</li>
+                            <li>Write a program that uses operators to perform basic math operations</li>
+                            <li>
+                                Write a program to traverse a binary tree using pointers and references, and
+                                print the values of the nodes in order (just kidding that is kinda
+                                advanced and you don't need to know that yet)
+                            </li>
+                        </ol>
                     </p>
                 </li>
             </ol>
