@@ -13,7 +13,7 @@
             <p>
                 Luau or Lua? Now let's just say it is sort of like C++ and C, where C++ is an extension of
                 C... Luau is an extension of Lua, which is unargably better, more optimized, with more
-                features. Now roblox has been using Lua until 2019, when they decided turn bjarne stroustrup
+                features. Now roblox has been using Lua until 2019, when they decided to turn bjarne stroustrup
                 and cooked up Luau. Now can we use Lua and Luau interchangeably? well yes, like how you can
                 say that any valid C code is also valid C++ code, but not the other way around. So you can
                 kind of getting some sense out of that, and now let's go-
@@ -30,7 +30,7 @@
                         toddler can speak, read, write, and have heard of programming then, here is an example
                         :<br />
                         <code>print("Taiwan is infact a country, what the CCP is gonna do?")</code><br />
-                        now excuse me can i get a water please? Okay so this is a very basic program that
+                        now can i please have a water? Okay so this is a very basic program that
                         prints out a string to the console, and you know what is a string right? maybe or
                         maybe not, but a string is just a sequence of characters, like a word or a sentence
                         and yeah, just basically text. And yes you can print out numbers too, like this:
@@ -44,7 +44,40 @@
                     </p>
                 </li>
                 <li>
-                    <h2> variables, end keyword</h2>
+                    <h2> variables, local, end keyword and function</h2>
+                    <p>
+                        let us review what is a variable again even though it hasn't been been mentioned in
+                        the previous section, so a variable is just a name that you give to a value,
+                        so you can use it for whatever purpose you want, like storing a phone number,
+                        a poem or a path to something... Which now let's have an example: <br />
+                        <code>local fact = "Taiwan is a country"</code><br /> So this is a variable
+                        named <code>fact</code> that stores a string, which hopefully you can decipher it
+                        yourself that it is a fact, and the <code>local</code> keyword is used to
+                        declare a variable that is only accessible within the scope of the function or
+                        block of code it is defined in, now you might also have no idea what a scope or even
+                        a function is-but don't worry, we will get to that in a moment, so just remember that
+                        <code>local</code> is used to declare a variable, and you can also use the
+                        <code>local</code> keyword to declare a function, like this: <br />
+                        <code>local function sayHello(name) <br />print("Hello, " .. name)<br /> end</code><br />
+                        so the function, can be declare with... The keyword function? and the name of the
+                        function, which is <code>sayHello</code> in this case, and the parentheses
+                        contain the parameters that the function takes, which is <code>name</code>,
+                        now you might be wondering what is parameter that function takes? It is basically
+                        a value that when you pass a value to the function, which is called argument, will be
+                        used by that function, which is called parameter, so you can use it inside the
+                        function... Which we will also get into the scope and the end keyword right now<br />
+                        <br /> so the <code>end</code> keyword is used to indicate the end of a block of code,
+                        like in this case, a function, which I will give you an example of how to use it
+                        : <br /> <code>local function sayHello(name) <br />     print("Hello, " .. name)<br /> 
+                        end</code><br /> alright as you can see the <code>end</code> keyword is used to
+                        indicate the end of the function, which means everything, inside that function 
+                        is only accessible within that function, and that is a scope. As for how you can call
+                        that function, you can just do this: <br /> sayHello("Pewdiepie")<br /> In this 
+                        case, the argument is <code>"Pewdiepie"</code>, and the function will return
+                        <code>"Hello, Pewdiepie"</code>, which is a string that is concatenated with the
+                        <code>name</code> parameter, now I know what you're thinking, what on earth is 
+                        concatenation? Well, it is just a fancy word for joining two strings together...<br />
+                    </p>
                 </li>
             </ol>
         </div>

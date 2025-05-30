@@ -22,6 +22,32 @@
             <ol>
                 <li>
                     <h2>Classes basics and programming paradigms</h2>
+                    <p>
+                        Now we're getting in the real deal, the real meat of c++ and programming, the classes
+                        and programming paradigms. So what is a class? Now i have mentioned classes before
+                        in the string section of the previous page, but i didn't really explain it so now
+                        let's get into it. A class is a blueprint for creating objects, which you know that
+                        string is also a class in c++, so a class is just a way to define a type of data
+                        in this case, you can define your own type of data, like a car, a person, or anything
+                        you can imagine really... Let's get into some examples of classes, so here is a simple
+                        class that defines a gun: <br /> <pre><code>
+                            class Gun {<br />
+                            public:<br />
+                                int ammo;<br />
+                            void shoot() {<br />
+                                ammo--;<br />
+                                std::cout << "Bang!" << std::endl;<br />
+                            }<br />
+                            };
+                        </code></pre>
+                        <br /> Now what do we have here? Well we have a class named <code>Gun</code> that has
+                        a keyword called "public" which is something called an access specifier, that allows
+                        us to access the members of the class from outside the class, and we have a member
+                        variable called <code>ammo</code> which is an integer that stores the amount of ammo
+                        the gun has, and we have a member function called <code>shoot</code> that decreases
+                        the ammo by 1 and prints out "Bang!", and now you might be wondering what is access
+                        specifier and member in the context of a class... 
+                    </p>
                 </li>
             </ol>
         </div>
