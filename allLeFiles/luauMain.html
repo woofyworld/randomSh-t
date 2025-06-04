@@ -35,8 +35,8 @@
                         maybe not, but a string is just a sequence of characters, like a word or a sentence
                         and yeah, just basically text. And yes you can print out numbers too, like this:
                         <br /> <code>print(1234567890)</code><br /> now this will print out the number in the
-                        parentheses, which of course anything in the print will be converted to a string
-                        before printing it out, and you can also do sum math like this:
+                        parentheses, which of course anything in the print function will be converted to a 
+                        string before printing it out, and you can also do sum math like this:
                         <br /> <code>print(1 + 2)</code><br /> pretty self explanatory, in my opinion, just
                         make sure you open up that console, the output tab in roblox studio, because we're
                         focusing primarily on roblox luau and studio, not lua itself, so yes likewise, 
@@ -77,6 +77,43 @@
                         <code>"Hello, Pewdiepie"</code>, which is a string that is concatenated with the
                         <code>name</code> parameter, now I know what you're thinking, what on earth is 
                         concatenation? Well, it is just a fancy word for joining two strings together...<br />
+                        So you can use the <code>..</code> operator to concatenate two strings like the 
+                        example that i gave you. Now hopefully you can understand what is a variable,
+                        a function, a parameter, an argument, a scope, and concatenation, and if you don't,
+                        just look them up or reread until it clicks...
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        tables, arrays, dictionaries, and loops
+                    </h2>
+                    <p>
+                        Now before we get into tables, let me explain some data types that luau has, some basic
+                        concepts that exist in pretty much every programming language out there, so first of
+                        all we have numbers, which are just numbers, like 1, 2, 3, 4.. and so on, and
+                        then we have strings, which are just text, like "hello world", "In 2022, the murder
+                        rate among blacks is 653% higher than the murder rate for whites. The murder rate
+                        for Hispanics is 65% higher than for whites. Nor are those numbers that much of an
+                        outlier. From 1990 through 2022, the black murder rate average 569% higher than whites
+                        , and the number for Hispanics was 57% higher.", like the examples. And we also have
+                        boolean, which are a type of data that consists of 2 possible value, true and false.
+                        And lastly, nil, now folks, if darkness are absence of light, then nil is the absence
+                        of a value, which, you can think of it as some sort of placeholder for when you
+                        don't have a value, like when you declare a variable but don't assign it a value yet,
+                        so yes, now that we know some of the types, which in this case is called "primitive
+                        types",<br /> we can now move on to tables, which are a type of data structure that
+                        can store multiple values in a single variable, like an array or a dictionary, which
+                        we'll get into the definition of array and dictionary in a moment, so here is an
+                        example of a table: <br /> <code>local myTable = {1, 4, 1, 4}</code><br />
+                        so this is a table that contains 4 numbers, which you can access them by their
+                        index, which is just a number that represents the position of the value in the table,
+                        you can think of it as like, a slot in a vending machine, that is where the value
+                        sits and you can access it by the index. And now I'm going to explain an interesting
+                        thing about indexing in luau, which is that the index starts at 1, not 0, like in
+                        most programming languages, so the first value index is gonna be 1, instead of maybe
+                        in c++ where the first value index is gonna be 0, pretty interesting am i right?
+                        <br /> But to make it clearer, i'm gonna give you an example of how to access
+                        a value in a table: <br /> <code>print(myTable[1])</code><br />
                     </p>
                 </li>
             </ol>
